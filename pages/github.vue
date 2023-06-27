@@ -50,13 +50,12 @@ export default {
         .then(res => (this.colors = res.data));
     },
     getRepos() {
-      axios.get("https://api.github.com/users/agcrisbp/repos").then(res => {
+      axios.get("https://api.github.com/users/zachary-cauchi/repos").then(res => {
         this.repos = res.data
           .filter(repo => !repo.all)
           .sort(
             (repo1, repo2) => repo2.stargazers_count - repo1.stargazers_count
-          )
-          .slice(0, 8);
+          );
       });
     }
   },
