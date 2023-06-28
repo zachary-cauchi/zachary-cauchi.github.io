@@ -1,13 +1,18 @@
 <script setup>
-let isOpen = ref(false)
+let isClosed = ref(true)
+let contactsIcon = ref(isClosed ? 'chevron-down' : 'chevron-up')
+let showHideContactsMsg = ref(isClosed ? 'Show Contacts' : 'Hide Contacts')
 
-function toggleMenu() {
-  isOpen = !isOpen
+function toggleMenu(event) {
+  isClosed = !isClosed
+  contactsIcon.value = isClosed ? 'chevron-down' : 'chevron-up'
+  showHideContactsMsg.value = isClosed ? 'Show Contacts' : 'Hide Contacts'
+  event.currentTarget.blur()
 }
 </script>
 
 <template>
-  <aside class="sidebar" :class="{ active: isOpen }">
+  <aside class="sidebar" :class="{ active: isClosed }">
     <div class="sidebar-info">
       <figure class="avatar-box">
         <img src="/images/avatar.png" alt="Photo" width="80">
@@ -24,14 +29,28 @@ function toggleMenu() {
         </p>
       </div>
 
-      <button class="info_more-btn" @click="isOpen = !isOpen">
-        <span>Show Contacts</span>
+      <button class="info_more-btn" @click="toggleMenu">
+        <span v-text="showHideContactsMsg"></span>
 
-        <ion-icon name="chevron-down" />
+        <!-- TODO: Improve with animation -->
+        <ion-icon :name="contactsIcon" />
       </button>
     </div>
 
     <div class="sidebar-info_more">
+      <div class="separator" />
+
+      <ul class="social-list">
+        <p class="contact-title">
+          My email:
+        </p>
+        <li class="social-item">
+          <NuxtLink to="mailto:zach.cauchi@hotmail.com" class="social-link" target="_blank">
+            <ion-icon name="mail-outline" />
+          </NuxtLink>
+        </li>
+      </ul>
+
       <div class="separator" />
 
       <ul class="contacts-list">
@@ -76,17 +95,6 @@ function toggleMenu() {
             <address>Malta 🇲🇹</address>
           </div>
         </li>
-      </ul>
-
-      <div class="separator" />
-
-      <ul class="social-list">
-        <li class="social-item">
-          <NuxtLink to="mailto:agcrisbp@email.com" class="social-link" target="_blank">
-            <ion-icon name="mail-outline" />
-          </NuxtLink>
-        </li>
-        <LangSwitcher2 />
       </ul>
     </div>
   </aside>

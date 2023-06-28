@@ -385,7 +385,7 @@ main {
 .info_more-btn:hover::before,
 .info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
 
-.info_more-btn span { display: none; }
+/* .info_more-btn span { display: none; } */
 
 .sidebar-info_more {
   opacity: 0;
@@ -1341,7 +1341,7 @@ textarea.github::-webkit-resizer { display: none; }
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 584px; }
+  .sidebar.active { max-height: 25rem; }
 
   .sidebar-info { gap: 25px; }
 
@@ -1364,9 +1364,9 @@ textarea.github::-webkit-resizer { display: none; }
     font-size: var(--fs-8);
   }
 
-  .info_more-btn ion-icon { display: none; }
+  /* .info_more-btn ion-icon { display: none; } */
 
-  .separator { margin: 32px 0; }
+  .separator { margin: 25px 0; }
 
   .contacts-list { gap: 20px; }
 
@@ -1848,7 +1848,7 @@ textarea.github::-webkit-resizer { display: none; }
   .sidebar {
     position: sticky;
     top: 60px;
-    max-height: 50rem;
+    max-height: 80rem;
     height: 100%;
     margin-bottom: 0;
     padding-top: 60px;
@@ -1866,7 +1866,7 @@ textarea.github::-webkit-resizer { display: none; }
 
   .info-content .title { margin: auto; }
 
-  .info_more-btn { display: none; }
+  /* .info_more-btn { display: none; } */
 
   .sidebar-info_more {
     opacity: 1;
@@ -1886,10 +1886,10 @@ textarea.github::-webkit-resizer { display: none; }
     font-weight: var(--fw-300);
   }
 
-  .separator:last-of-type {
+  /* .separator:last-of-type {
     margin: 15px 0;
-    opacity: 0;
-  }
+    opacity: 1;
+  } */
 
   .social-list { justify-content: center; }
 
