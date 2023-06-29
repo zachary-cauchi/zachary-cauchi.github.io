@@ -1,27 +1,31 @@
 import { defineEventHandler } from 'h3'
+export const categories = [
+  {
+    id: 1,
+    title: {
+      en: 'Web Projects',
+    },
+  },
+  {
+    id: 2,
+    title: {
+      en: 'Experiments'
+    }
+  },
+  {
+    id: 3,
+    title: {
+      en: 'DevOps'
+    },
+  },
+  {
+    id: 4,
+    title: {
+      en: 'Embedded Hardware'
+    }
+  }
+]
 
 export default defineEventHandler(() => {
-  return [
-    {
-      id: 1,
-      title: {
-        en: 'Song',
-        id_ID: 'Lagu',
-      },
-    },
-    {
-      id: 2,
-      title: {
-        en: 'App',
-        id_ID: 'Aplikasi',
-      },
-    },
-    {
-      id: 3,
-      title: {
-        en: 'Web Design',
-        id_ID: 'Desain Web',
-      },
-    },
-  ]
+  return categories
 })
