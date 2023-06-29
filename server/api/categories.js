@@ -23,6 +23,18 @@ export const categories = [
     title: {
       en: 'Embedded Hardware'
     }
+  },
+  {
+    id: 5,
+    title: {
+      en: 'Performance-Intensive Apps'
+    }
+  },
+  {
+    id: 6,
+    title: {
+      en: 'AI'
+    }
   }
 ]
 
