@@ -1,7 +1,12 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
+
 useHead({
   title: 'Resume',
 })
+
+const { locale } = useI18n({ useScope: 'global' })
+const { data: workItems } = await useFetch('/api/work-history')
 </script>
 
 <template>
@@ -14,29 +19,24 @@ useHead({
 
     <section class="timeline">
       <ol class="timeline-list">
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">
-            Company
+        <li v-for="work in workItems" :key="work.id" class="timeline-item">
+          <h4 class="h4 timeline-item-subtitle">
+            {{ work.title[locale] }}
           </h4>
-          <span>From — Until</span>
-          <p class="timeline-item-desc">
-            Location
+          <span class="timeline-date">{{ new Date(work.dateFrom).toLocaleDateString(locale) }} — {{ new Date(work.dateTo).toLocaleDateString(locale) }}</span>
+          <h5 class="h4 timeline-item-title">
+            <span>
+              <a :href="work.website[locale]" target="_blank">{{ work.employer[locale] }} 🌐</a>
+            </span>
+            <span v-show="work.department[locale]" class="timeline-item-desc">
+              — {{ work.department[locale] }}
+            </span>
+          </h5>
+          <p v-show="work.address[locale]" class="timeline-item-desc">
+            📍 {{ work.address[locale] }}
           </p>
           <p class="timeline-text">
-            Position
-          </p>
-        </li>
-        
-        <li class="timeline-item">
-          <h4 class="h4 timeline-item-title">
-            Company
-          </h4>
-          <span>From — Until</span>
-          <p class="timeline-item-desc">
-            Location
-          </p>
-          <p class="timeline-text">
-            Position
+            {{ work.description[locale] }}
           </p>
         </li>
       </ol>
