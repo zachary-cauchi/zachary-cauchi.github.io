@@ -322,7 +322,7 @@ main {
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active { max-height: 30rem; }
 
 .sidebar-info {
   position: relative;
@@ -1353,11 +1353,11 @@ textarea.github::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 30rem;
     margin-bottom: 30px;
   }
 
-  .sidebar.active { max-height: 25rem; }
+  .sidebar.active { max-height: 24rem; }
 
   .sidebar-info { gap: 25px; }
 
