@@ -317,12 +317,12 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 30rem;
   overflow: hidden;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 30rem; }
+.sidebar.active { max-height: 8rem; }
 
 .sidebar-info {
   position: relative;
@@ -388,14 +388,14 @@ main {
 /* .info_more-btn span { display: none; } */
 
 .sidebar-info_more {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: var(--transition-2);
 }
 
 .sidebar.active .sidebar-info_more {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .contacts-list {
