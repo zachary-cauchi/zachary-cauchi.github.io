@@ -310,5 +310,23 @@ export default defineEventHandler(async () => {
       image: '/images/projects/antlr.png',
       url: 'https://github.com/zachary-cauchi/zastromo-win-graphics-controller/tree/feature-custom-graphics-format',
     },
+    {
+      id: 18,
+      title: 'GBA Projects',
+      category: {
+        ...categories[1],
+        date: {
+          en: 'June 2023',
+        },
+      },
+      content: {
+        en: 'One of my earlier run-ins with C, this contains some experiments and mini-projects to become familiar with developing games for the GameBoy Advance. Of note are a basic title menu and a \'battleship hangar\'.',
+      },
+      desc: {
+          en: 'View Source Code',
+      },
+      image: '/images/projects/c.png',
+      url: 'https://github.com/zachary-cauchi/Proj_A113',
+    },
   ]
 })
