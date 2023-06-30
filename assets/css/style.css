@@ -176,6 +176,10 @@ article {
   z-index: 1;
 }
 
+.sidebar p,a,address {
+  color: var(--light-gray);
+}
+
 .separator {
   width: 100%;
   height: 1px;
