@@ -4,40 +4,36 @@ export default defineEventHandler(() => {
   return [
     {
       id: 1,
-      title: 'React',
+      title: 'C#',
       description: {
-        en: 'I build modern and advanced websites and applications with React or Expo by React Native.',
-        id_ID: 'Saya membuat situs web dan aplikasi modern menggunakan React atau Expo dari React Native.',
+        en: 'I am experienced with using C# to develop Enterprise-ready web APIs using frameworks and tools such as ASP.NET Core and Microsoft Orleans.',
       },
-      icon: 'devicon:react',
+      icon: 'devicon:csharp',
       image: null,
     },
     {
       id: 2,
-      title: 'Vue',
+      title: 'Typescript',
       description: {
-        en: 'I use Vue, a modern JavaScript and Typescript framework, while making dynamic and static websites and applications.',
-        id_ID: 'Terkadang saya juga menggunakan Vue, framework JavaScript dan Typescript sumber terbuka modern, ketika membuat website maupun aplikasi.',
+        en: 'I am adept with using Javascript and Typescript to create microservices, perform automated testing of websites, and develop CI/CD actions.',
       },
-      icon: 'devicon:vuejs',
+      icon: 'devicon:typescript',
       image: null,
     },
     {
       id: 3,
-      title: 'Kotlin',
+      title: 'C++',
       description: {
-        en: 'For an app, I also use Kotlin.',
-        id_ID: 'Untuk membuat aplikasi, saya juga menggunakan Kotlin.',
+        en: 'I have experience with using C/C++ for developing embedded programs and applications as well as performance-intensive applications.'
       },
-      icon: 'devicon:kotlin',
+      icon: 'devicon:cplusplus',
       image: null,
     },
     {
       id: 4,
       title: 'Python',
       description: {
-        en: 'In Cybersecurity, I use Python, SQL, Java/JavaScript, C++, etc. But Python is the language I use more often.',
-        id_ID: 'Dalam bidang Keamanan Siber, saya menggunakan Python, SQL, Java/JavaScript, C++, dll. Tapi Python adalah bahasa yang lebih sering saya gunakan.',
+        en: 'In my AI-oriented projects, I use Python as the main language of choice.',
       },
       icon: 'devicon:python',
       image: null,
