@@ -185,7 +185,7 @@ export default defineEventHandler(async () => {
       url: 'https://github.com/zachary-cauchi/CPS3236-assignment-1-nbody-sim',
     },
     {
-      id: 10,
+      id: 11,
       title: 'MiniBooNE dataset classifier',
       category: {
         ...categories[5],
@@ -203,7 +203,7 @@ export default defineEventHandler(async () => {
       url: 'https://github.com/zachary-cauchi/CCE5225-assignment-1',
     },
     {
-      id: 10,
+      id: 12,
       title: 'Bayesian Chain vs Binary Relavance',
       category: {
         ...categories[5],
@@ -219,6 +219,96 @@ export default defineEventHandler(async () => {
       },
       image: '/images/projects/bayesian-chain.png',
       url: 'https://github.com/zachary-cauchi/CCE5225-assignment-2',
+    },
+    {
+      id: 13,
+      title: 'Pikmin of Isaac',
+      category: {
+        ...categories[1],
+        date: {
+          en: 'June 2023',
+        },
+      },
+      content: {
+        en: 'A fun experiment to get familiar with Lua, this is a mod for "The Binding of Isaac: Rebirth" to add Pikmin to the game. The program uses Boid AI to coordinate and move the flock of entities it creates, much like birds in a flock.',
+      },
+      desc: {
+          en: 'View Source Code',
+      },
+      image: '/images/projects/lua.png',
+      url: 'https://github.com/zachary-cauchi/pikmin-of-isaac',
+    },
+    {
+      id: 14,
+      title: 'zaCherno',
+      category: {
+        ...categories[1],
+        date: {
+          en: 'June 2023',
+        },
+      },
+      content: {
+        en: 'The base foundations for a game engine written in C++ by following a tutorial series by Yan Chernikov (https://www.youtube.com/playlist?list=PLlrATfBNZ98dC-V-N3m0Go4deliWHPFwT). It follows industry-standard logging features, imgui-based ui tools, event-handling, and automated project setup and building via premake5.',
+      },
+      desc: {
+          en: 'View Source Code',
+      },
+      image: '/images/projects/c++.png',
+      url: 'https://github.com/zachary-cauchi/zacherno',
+    },
+    {
+      id: 15,
+      title: 'BLE tag program',
+      category: {
+        ...categories[1],
+        date: {
+          en: 'June 2023',
+        },
+      },
+      content: {
+        en: 'As the first part of my BSc dissertation, this program runs on a Bluetooth tag and simulates an IoT device. The program is written in C and flashes onto an NRF51822 chip.',
+      },
+      desc: {
+          en: 'View Source Code',
+      },
+      image: '/images/projects/c.png',
+      url: 'https://github.com/zachary-cauchi/dcs-tag-server',
+    },
+    {
+      id: 16,
+      title: 'Android app for BLE communication',
+      category: {
+        ...categories[1],
+        date: {
+          en: 'June 2023',
+        },
+      },
+      content: {
+        en: 'As the second part of my BSc dissertation, this Android app stores device instructions on nearby Bluetooth tags and can execute those instructions if received. The program is written in Java.',
+      },
+      desc: {
+          en: 'View Source Code',
+      },
+      image: '/images/projects/android.png',
+      url: 'https://github.com/zachary-cauchi/dcs-android-client',
+    },
+    {
+      id: 17,
+      title: 'Zastromo Underlay Language',
+      category: {
+        ...categories[1],
+        date: {
+          en: 'June 2023',
+        },
+      },
+      content: {
+        en: 'While working on a pet project for fun, I wound up following a guide book (Language Implementation Patterns) to create a custom scripting language for rendering graphics to a Windows desktop background. The program, written in C#, was made by hand without the use of ANTLR or similar tools. A grammar file explaining the language structure can be found in the project.',
+      },
+      desc: {
+          en: 'View Source Code',
+      },
+      image: '/images/projects/antlr.png',
+      url: 'https://github.com/zachary-cauchi/zastromo-win-graphics-controller/tree/feature-custom-graphics-format',
     },
   ]
 })
