@@ -1,6 +1,5 @@
 <script setup>
 import { useCookieStore } from '../composables/cookie'
-import nuxtStorage from 'nuxt-storage'
 
 const key = 'useConstructionBar'
 let showBar = ref(false);
