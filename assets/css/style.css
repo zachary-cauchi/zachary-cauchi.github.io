@@ -357,8 +357,8 @@ main {
 
 .info_more-btn {
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: -1rem;
+  right: -1rem;
   border-radius: 0 15px;
   font-size: 13px;
   color: var(--vegas-gold);
@@ -1370,8 +1370,8 @@ textarea.github::-webkit-resizer { display: none; }
   .info-content .title { padding: 5px 18px; }
 
   .info_more-btn {
-    top: -30px;
-    right: -30px;
+    top: -4rem;
+    right: -2rem;
     padding: 10px 15px;
   }
 
