@@ -1,4 +1,4 @@
-name: cd
+name: Deploy Portfolio to Pages
 
 on:
   push:
@@ -8,8 +8,12 @@ on:
       - 'v*.*.*'
   workflow_dispatch:
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  deploy-portfolio:
+  build-and-deploy:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -17,11 +21,12 @@ jobs:
         os: [ubuntu-latest]
         node: [20]
 
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-
     permissions:
       contents: write
+      pages: write
+      id-token: write
+
+    environment: github-pages
 
     steps:
       - name: Checkout
@@ -48,9 +53,10 @@ jobs:
           echo "DEPLOY_TAG_NAME=deploy-${GITHUB_REF_NAME}" >> "${GITHUB_OUTPUT}"
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.9.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./.output/public
           tag_name: ${{ steps.prepare_tag.outputs.DEPLOY_TAG_NAME }}
-          tag_message: 'Deploy tag ${{ github.ref_name }} using GitHub Actions'
+          tag_message: 'Static files deployed for tag ${{ github.ref_name }} to GitHub Pages.'
+          enable_jekyll: false
