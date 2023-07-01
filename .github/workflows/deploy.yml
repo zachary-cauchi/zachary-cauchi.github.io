@@ -79,8 +79,10 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
-      - name: Static HTML export with Nuxt
+      - name: Generate static Nuxt files
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
+        env:
+          NITRO_PRESET: github-pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
