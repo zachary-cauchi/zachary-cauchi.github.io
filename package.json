@@ -7,7 +7,7 @@
     "start": "node .output/server/index.mjs",
     "lint": "eslint .",
     "postinstall": "nuxi prepare",
-    "generate": "nuxi generate"
+    "generate": "nuxi generate && touch .output/public/.nojekyll"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
