@@ -50,15 +50,15 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: nuxt
 
-      # - name: Restore cache
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: |
-      #       ${{ env.publish_dir }}
-      #       .nuxt
-      #     key: ${{ runner.os }}-nuxt-build-${{ hashFiles(env.publish_dir) }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-nuxt-build-
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.publish_dir }}
+            .nuxt
+          key: ${{ runner.os }}-nuxt-build-${{ hashFiles(env.publish_dir) }}
+          restore-keys: |
+            ${{ runner.os }}-nuxt-build-
 
       - name: Install dependencies
         run: npm install
