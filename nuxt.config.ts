@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     '/assets/css/style.css',
   ],
   build: {
-    transpile: ['pinia-orm', 'primevue', '@apollo/client', 'ts-invariant/process'],
+    transpile: ['pinia-orm', 'primevue'],
   },
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
