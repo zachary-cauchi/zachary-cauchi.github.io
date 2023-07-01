@@ -7,7 +7,8 @@
     "start": "node .output/server/index.mjs",
     "lint": "eslint .",
     "postinstall": "nuxi prepare",
-    "generate": "nuxi generate && touch .output/public/.nojekyll"
+    "generate": "nuxi generate && touch .output/public/.nojekyll",
+    "generate-gh": "NITRO_PRESET=github-pages nuxi generate && touch .output/public/.nojekyll"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
