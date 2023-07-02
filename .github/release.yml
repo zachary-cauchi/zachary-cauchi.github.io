@@ -8,6 +8,12 @@ changelog:
         labels:
           - dependencies
           - resume
+    - title: 🐛 Bugs Fixed
+      labels:
+        - 'bug'
+      exclude:
+        labels:
+          - ''
     - title: 👔 Resume
       labels:
         - resume
