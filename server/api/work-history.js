@@ -18,8 +18,16 @@ export default defineEventHandler(() => ([
         website: {
             en: 'https://www.bov.com'
         },
-        dateFrom: new Date(2021, 6, 30),
-        dateTo: new Date(2023, 6, 29),
+        dateFrom: {
+            year: 2021,
+            month: 6,
+            day: 30
+        },
+        dateTo: {
+            year: 2023,
+            month: 6,
+            day: 29
+        },
         description: {
             en: `Coordinate releases of vendor-supplied software packages to our infrastructure.
 Develop and maintain in-house tools used by our client-facing teams.
@@ -46,8 +54,16 @@ Introduce new technologies to our teams to assist in development and productivit
         website: {
             en: 'https://www.netrefer.com'
         },
-        dateFrom: new Date(2020, 6, 24),
-        dateTo: new Date(2021, 6, 22),
+        dateFrom: {
+            year: 2020,
+            month: 11,
+            day: 24
+        },
+        dateTo: {
+            year: 2021,
+            month: 6,
+            day: 22
+        },
         description: {
             en: `Work on the services, data models, and testing of upcoming products.
 • Design aspects of the product.
@@ -74,8 +90,16 @@ Design and implement the DevOps infrastructure for running integration tests on 
         website: {
             en: 'https://www.netrefer.com'
         },
-        dateFrom: new Date(2018, 12, 3),
-        dateTo: new Date(2020, 6, 24),
+        dateFrom: {
+            year: 2018,
+            month: 12,
+            day: 3
+        },
+        dateTo: {
+            year: 2020,
+            month: 6,
+            day: 24
+        },
         description: {
             en: `Begun the process of migrating from totally manual testing to an automated approach.
 • Automating the quality assurance and testing of our products such as sanity testing.
