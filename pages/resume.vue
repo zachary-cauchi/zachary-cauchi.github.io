@@ -1,5 +1,6 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
+import { Icon } from '@iconify/vue';
 
 useHead({
   title: 'Resume',
@@ -7,6 +8,7 @@ useHead({
 
 const { locale } = useI18n({ useScope: 'global' })
 const { data: workItems } = await useFetch('/api/work-history')
+const { data: skills } = await useFetch('/api/skills')
 </script>
 
 <template>
@@ -44,19 +46,19 @@ const { data: workItems } = await useFetch('/api/work-history')
 
     <section class="skill">
       <ul class="skills-list content-card">
-        <li class="skills-item">
+        <li v-for="skill in skills" :key="skill.id" class="skills-item">
           <div class="title-wrapper">
+            <Icon :icon="skill.icon" class="text-ranko-500 text-[3rem]" style="width: 2rem;" />
             <h5 class="h5">
-              Your Skill
+              {{skill.name}}
             </h5>
-            <data value="90">90%</data>
+            <data :value="skill.skill">{{ skill.skill }}%</data>
           </div>
 
           <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 90%;" />
+            <div class="skill-progress-fill" :style="{ width: skill.skill + '%' }" />
           </div>
         </li>
-
       </ul>
     </section>
   </article>
