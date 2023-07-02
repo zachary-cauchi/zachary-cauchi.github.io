@@ -11,7 +11,7 @@ useHead({
   },
   meta: [
       { charset: 'utf-8' },
-      { name: 'description', content: 'Personal site about Zachary Cauchi.' },
+      { name: 'description', content: 'Portfolio site belonging to Zachary Cauchi.' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'og:image', content: 'https://avatars.githubusercontent.com/u/23012377?v=4' }
     ],
@@ -46,6 +46,7 @@ useHead({
     },
   ],
 })
+
 </script>
 
 <template>
