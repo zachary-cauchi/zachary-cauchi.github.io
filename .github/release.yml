@@ -1,0 +1,19 @@
+
+changelog:
+  categories:
+    - title: 🏕 Features
+      labels:
+        - '*'
+      exclude:
+        labels:
+          - dependencies
+          - resume
+    - title: 👔 Resume
+      labels:
+        - resume
+      exclude:
+        labels:
+          - ''
+    - title: 👒 Dependencies
+      labels:
+        - dependencies
