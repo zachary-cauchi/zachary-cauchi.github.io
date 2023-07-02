@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/robots',
     '@intlify/nuxt3',
     'nuxt-simple-sitemap'
   ],
