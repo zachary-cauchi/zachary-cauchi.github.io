@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/tailwindcss',
     '@intlify/nuxt3',
+    'nuxt-simple-sitemap'
   ],
   experimental: {
     reactivityTransform: true,
@@ -54,4 +55,17 @@ export default defineNuxtConfig({
     color: 'blue',
     height: '5px',
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/'
+      ]
+    }
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://zachary-cauchi.github.io'
+    }
+  }
 })
