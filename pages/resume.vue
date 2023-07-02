@@ -25,7 +25,10 @@ const { data: skills } = await useFetch('/api/skills')
           <h4 class="h4 timeline-item-subtitle">
             {{ work.title[locale] }}
           </h4>
-          <span class="timeline-date">{{ new Date(work.dateFrom).toLocaleDateString(locale) }} — {{ new Date(work.dateTo).toLocaleDateString(locale) }}</span>
+          <span class="timeline-date">
+            {{ new Date(work.dateFrom.year, work.dateFrom.month, work.dateFrom.day).toLocaleDateString(locale) }}
+            —
+            {{ new Date(work.dateTo.year, work.dateTo.month, work.dateTo.day).toLocaleDateString(locale) }}</span>
           <h5 class="h4 timeline-item-title">
             <span>
               <a :href="work.website[locale]" target="_blank">{{ work.employer[locale] }} 🌐</a>
