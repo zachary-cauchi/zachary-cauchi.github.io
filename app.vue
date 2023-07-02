@@ -31,7 +31,7 @@ useSeoMeta({
   creator: 'Zachary Cauchi',
   author: 'Zachary Cauchi',
   generator: 'nuxt',
-  // googleSiteVerification: undefined, // TODO: To add google analytics.
+  googleSiteVerification: 'pQ467KZN-qMT5Q5yYSHcVlPjk_GYjst3QOF8F8pXEOc',
   mobileWebAppCapable: 'yes',
   appleMobileWebAppCapable: 'yes',
   appleMobileWebAppStatusBarStyle: 'default',
