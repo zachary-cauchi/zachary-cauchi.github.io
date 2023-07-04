@@ -58,7 +58,7 @@ jobs:
         run: npm install
 
       - name: Inject Google Site Verification file
-        run: echo "$filedata" > public/$filename
+        run: echo "${filedata}" > public/${filename}
         env:
           filename: ${{ vars.GOOGLESITEVERIFICATION_FILECONTENTS }}
           filedata: ${{ vars.GOOGLESITEVERIFICATION_FILENAME }}
