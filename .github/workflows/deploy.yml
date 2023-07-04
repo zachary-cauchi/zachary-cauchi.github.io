@@ -57,10 +57,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Inject Google Site Verification file
+        run: echo "$filedata" > $filename
+        env:
+          filename: ${{ vars.GOOGLESITEVERIFICATION_FILECONTENTS }}
+          filedata: ${{ vars.GOOGLESITEVERIFICATION_FILENAME }}
+
       - name: Generate static Nuxt files
         run: npm run generate
         env:
           NITRO_PRESET: github-pages
+          googleSiteVerification: ${{ vars.GOOGLESITEVERIFICATION }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
