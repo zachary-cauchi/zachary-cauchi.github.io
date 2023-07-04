@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "postinstall": "nuxi prepare",
     "generate": "nuxi generate",
-    "generate-gh": "NITRO_PRESET=github-pages nuxi generate"
+    "generate-gh": "NITRO_PRESET=github-pages nuxi generate",
+    "generate-cf": "NITRO_PRESET=cloudflare_pages nuxi generate"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
