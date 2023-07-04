@@ -60,8 +60,8 @@ jobs:
       - name: Inject Google Site Verification file
         run: echo "${filedata}" > public/${filename}
         env:
-          filename: ${{ vars.GOOGLESITEVERIFICATION_FILECONTENTS }}
-          filedata: ${{ vars.GOOGLESITEVERIFICATION_FILENAME }}
+          filename: ${{ vars.GOOGLESITEVERIFICATION_FILENAME }}
+          filedata: ${{ vars.GOOGLESITEVERIFICATION_FILECONTENTS }}
 
       - name: Generate static Nuxt files
         run: npm run generate
