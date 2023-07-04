@@ -49,7 +49,7 @@ export default defineNuxtConfig({
       warn: false,
     },
     compilerOptions: {
-      isCustomElement: tag => tag.startsWith('ion-'),
+      isCustomElement: (tag: string) => tag.startsWith('ion-'),
     },
   },
   loading: {
@@ -66,7 +66,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://zachary-cauchi.github.io'
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://zachary-cauchi.github.io',
+      googleSiteVerification: process.env.googleSiteVerification ?? '<site-key-missing>'
     }
-  }
+  },
 })

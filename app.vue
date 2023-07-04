@@ -3,6 +3,7 @@ import { useI18n } from 'vue-i18n'
 import { useLocaleStore } from './composables/locale'
 const { locale } = useI18n({ useScope: 'global' })
 const cookieLocale = useLocaleStore()
+const config = useRuntimeConfig()
 
 locale.value = cookieLocale.getLocale || 'en'
 
@@ -31,7 +32,7 @@ useSeoMeta({
   creator: 'Zachary Cauchi',
   author: 'Zachary Cauchi',
   generator: 'nuxt',
-  googleSiteVerification: 'pQ467KZN-qMT5Q5yYSHcVlPjk_GYjst3QOF8F8pXEOc',
+  googleSiteVerification: config.public.googleSiteVerification,
   mobileWebAppCapable: 'yes',
   appleMobileWebAppCapable: 'yes',
   appleMobileWebAppStatusBarStyle: 'default',
