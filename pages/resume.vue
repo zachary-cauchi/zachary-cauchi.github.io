@@ -9,14 +9,6 @@ useHead({
 const { locale } = useI18n({ useScope: 'global' })
 const { data: workItems } = await useFetch('/api/work-history')
 const { data: skills } = await useFetch('/api/skills')
-const { data: categories } = await useFetch('/api/skill-categories')
-
-const categorisedSkills = computed(() => {
-  return categories.value
-    .map((category) => ({ id: category.id, title: category.title[locale.value], skills: skills.value.filter(skill => skill.category === category.id) }))
-    .filter(catSkill => catSkill.skills.length > 0)
-})
-
 </script>
 
 <template>
@@ -56,27 +48,21 @@ const categorisedSkills = computed(() => {
     </section>
 
     <section class="skill">
-      <div class="skills-container content-card">
-        <h3 class="h3">Skills</h3>
-        <div v-for="categorisedSkill in categorisedSkills" :key="categorisedSkill.id" class="skills-container content-card">
-          <h4 class="h4">{{categorisedSkill.title}}</h4>
-          <ul class="skills-list">
-            <li v-for="skill in categorisedSkill.skills" :key="skill.id" class="skills-item">
-              <div class="title-wrapper">
-                <Icon :icon="skill.icon" class="text-ranko-500 text-[3rem]" style="width: 2rem;" />
-                <h5 class="h5">
-                  {{skill.name}}
-                </h5>
-                <data :value="skill.skill">{{ skill.skill }}%</data>
-              </div>
+      <ul class="skills-list content-card">
+        <li v-for="skill in skills" :key="skill.id" class="skills-item">
+          <div class="title-wrapper">
+            <Icon :icon="skill.icon" class="text-ranko-500 text-[3rem]" style="width: 2rem;" />
+            <h5 class="h5">
+              {{skill.name}}
+            </h5>
+            <data :value="skill.skill">{{ skill.skill }}%</data>
+          </div>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" :style="{ width: skill.skill + '%' }" />
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+          <div class="skill-progress-bg">
+            <div class="skill-progress-fill" :style="{ width: skill.skill + '%' }" />
+          </div>
+        </li>
+      </ul>
     </section>
   </article>
 </template>

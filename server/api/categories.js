@@ -1,37 +1,43 @@
 import { defineEventHandler } from 'h3'
-export const skillCategories = [
+export const categories = [
   {
     id: 1,
     title: {
-      en: 'Programming Languages',
+      en: 'Web Projects',
     },
   },
   {
     id: 2,
     title: {
-      en: 'DevOps'
+      en: 'Experiments'
     }
   },
   {
     id: 3,
     title: {
-      en: 'Data'
+      en: 'DevOps'
     },
   },
   {
     id: 4,
     title: {
-      en: 'Web / Frontend'
+      en: 'Embedded Hardware'
     }
   },
   {
     id: 5,
     title: {
-      en: 'Backend Frameworks'
+      en: 'Performance-Intensive Apps'
     }
   },
+  {
+    id: 6,
+    title: {
+      en: 'AI'
+    }
+  }
 ]
 
 export default defineEventHandler(() => {
-  return skillCategories
+  return categories
 })

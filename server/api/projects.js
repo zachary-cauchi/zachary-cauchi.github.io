@@ -1,5 +1,5 @@
 import { defineEventHandler } from 'h3'
-import { projectCategories } from './project-categories'
+import { categories } from './categories'
 
 export default defineEventHandler(async () => {
 
@@ -8,7 +8,7 @@ export default defineEventHandler(async () => {
       id: 1,
       title: 'zachary-cauchi.github.io',
       category: {
-        ...projectCategories[0],
+        ...categories[0],
         date: {
           en: 'June 2023',
         },
@@ -26,7 +26,7 @@ export default defineEventHandler(async () => {
       id: 2,
       title: 'github-actions-hot-repos',
       category: {
-        ...projectCategories[2],
+        ...categories[2],
         date: {
           en: 'June 2023',
         },
@@ -44,7 +44,7 @@ export default defineEventHandler(async () => {
       id: 3,
       title: 'zachs-movie-database',
       category: {
-        ...projectCategories[1],
+        ...categories[1],
         date: {
           en: 'June 2023',
         },
@@ -62,7 +62,7 @@ export default defineEventHandler(async () => {
       id: 4,
       title: 'angular-sample-todo-app',
       category: {
-        ...projectCategories[0],
+        ...categories[0],
         date: {
           en: 'June 2023',
         },
@@ -80,7 +80,7 @@ export default defineEventHandler(async () => {
       id: 5,
       title: 'golang-angular-sample-app',
       category: {
-        ...projectCategories[2],
+        ...categories[2],
         date: {
           en: 'June 2023',
         },
@@ -98,7 +98,7 @@ export default defineEventHandler(async () => {
       id: 6,
       title: 'Galaxior Conquest',
       category: {
-        ...projectCategories[0],
+        ...categories[0],
         date: {
           en: 'June 2023',
         },
@@ -116,7 +116,7 @@ export default defineEventHandler(async () => {
       id: 7,
       title: 'ballerina-experimentation',
       category: {
-        ...projectCategories[1],
+        ...categories[1],
         date: {
           en: 'June 2023',
         },
@@ -134,7 +134,7 @@ export default defineEventHandler(async () => {
       id: 8,
       title: 'ps2-code-samples',
       category: {
-        ...projectCategories[3],
+        ...categories[3],
         date: {
           en: 'June 2023',
         },
@@ -152,7 +152,7 @@ export default defineEventHandler(async () => {
       id: 9,
       title: 'Ray Tracer',
       category: {
-        ...projectCategories[4],
+        ...categories[4],
         date: {
           en: 'June 2023',
         },
@@ -170,7 +170,7 @@ export default defineEventHandler(async () => {
       id: 10,
       title: 'N-Body Gravity Simulator',
       category: {
-        ...projectCategories[4],
+        ...categories[4],
         date: {
           en: 'June 2023',
         },
@@ -188,7 +188,7 @@ export default defineEventHandler(async () => {
       id: 11,
       title: 'MiniBooNE dataset classifier',
       category: {
-        ...projectCategories[5],
+        ...categories[5],
         date: {
           en: 'June 2023',
         },
@@ -206,7 +206,7 @@ export default defineEventHandler(async () => {
       id: 12,
       title: 'Bayesian Chain vs Binary Relavance',
       category: {
-        ...projectCategories[5],
+        ...categories[5],
         date: {
           en: 'June 2023',
         },
@@ -224,7 +224,7 @@ export default defineEventHandler(async () => {
       id: 13,
       title: 'Pikmin of Isaac',
       category: {
-        ...projectCategories[1],
+        ...categories[1],
         date: {
           en: 'June 2023',
         },
@@ -242,7 +242,7 @@ export default defineEventHandler(async () => {
       id: 14,
       title: 'zaCherno',
       category: {
-        ...projectCategories[1],
+        ...categories[1],
         date: {
           en: 'June 2023',
         },
@@ -260,7 +260,7 @@ export default defineEventHandler(async () => {
       id: 15,
       title: 'BLE tag program',
       category: {
-        ...projectCategories[1],
+        ...categories[1],
         date: {
           en: 'June 2023',
         },
@@ -278,7 +278,7 @@ export default defineEventHandler(async () => {
       id: 16,
       title: 'Android app for BLE communication',
       category: {
-        ...projectCategories[1],
+        ...categories[1],
         date: {
           en: 'June 2023',
         },
@@ -296,7 +296,7 @@ export default defineEventHandler(async () => {
       id: 17,
       title: 'Zastromo Underlay Language',
       category: {
-        ...projectCategories[1],
+        ...categories[1],
         date: {
           en: 'June 2023',
         },
@@ -314,7 +314,7 @@ export default defineEventHandler(async () => {
       id: 18,
       title: 'GBA Projects',
       category: {
-        ...projectCategories[1],
+        ...categories[1],
         date: {
           en: 'June 2023',
         },

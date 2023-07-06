@@ -29,13 +29,12 @@ export default defineEventHandler(() => ([
             day: 29
         },
         description: {
-            en: `Coordinated releases of vendor-supplied software packages from start to finish.
-Developed and maintained in-house tools used by client-facing teams.
-Developed new tools for preparing and processing of financial transactions.
-Provided support outside of office hours to operations teams to ensure reliable uptime of client-
+            en: `Coordinate releases of vendor-supplied software packages to our infrastructure.
+Develop and maintain in-house tools used by our client-facing teams.
+Develop new tools for preparing and processing of transactions by our in-house teams.
+Provide support outside of office hours to our operations teams to ensure reliable uptime of our client-
 serving infrastructure and services.
-Introduced new technologies to assist in development and productivity.
-Kept log of production-impacting incidents, their causes, and instructions on how to mitigate them.`
+Introduce new technologies to our teams to assist in development and productivity.`
         }
     },
     {
@@ -66,12 +65,12 @@ Kept log of production-impacting incidents, their causes, and instructions on ho
             day: 22
         },
         description: {
-            en: `Worked on the services, data models, and testing of upcoming products.
-• Designed aspects of the product.
-• Implemented features of the product.
-• Built suitable tests and documentation.
-Built suitable tools for testing components of the product.
-Designed and implemented the DevOps infrastructure for running integration tests on package releases.`
+            en: `Work on the services, data models, and testing of upcoming products.
+• Design aspects of the product.
+• Implement features of the product.
+• Build suitable tests and documentation.
+Build suitable tools for testing components of the product.
+Design and implement the DevOps infrastructure for running integration tests on package releases.`
         }
     },
     {
@@ -102,15 +101,15 @@ Designed and implemented the DevOps infrastructure for running integration tests
             day: 24
         },
         description: {
-            en: `Designed and developed an automated suite of tests for phasing out manual testing of software products.
-• Automated the quality assurance and testing suites of products such as sanity testing.
-• Automated client project testing such as onboardings and new product integrations.
-Developed the tools used for building and writing of tests.
-Assisted developers in development and testing of products.
-Taught colleagues how to contribute to the automated test suite and how to effectively use the tools for doing so.
-Adapted the testing toolset to the products architecture where the toolset would not function as expected.
-Took part in developer code review process.
-Oversaw and developed test automation methodologies, tools, and projects for the tech team.`
+            en: `Begun the process of migrating from totally manual testing to an automated approach.
+• Automating the quality assurance and testing of our products such as sanity testing.
+• Automate client project testing such as onboardings and product integration.
+Developing the tools used for building and writing our tests.
+Assisting developers in development and testing of products.
+Teaching my colleagues how to contribute to the automated test suite and the tools used.
+Adapting our testing toolset to our products architecture.
+Take part in the developers' code review process.
+Oversee and develop test automation methodologies, tools, and projects for the tech team.`
         }
     }
 ]))
