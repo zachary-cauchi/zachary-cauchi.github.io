@@ -15,6 +15,7 @@ const categorisedSkills = computed(() => {
   return categories.value
     .map((category) => ({ id: category.id, title: category.title[locale.value], skills: skills.value.filter(skill => skill.category === category.id) }))
     .filter(catSkill => catSkill.skills.length > 0)
+    .sort((a, b) => a.title < b.title ? -1 : a.title > b.title ? 1 : 0)
 })
 
 </script>
