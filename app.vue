@@ -23,8 +23,8 @@ onMounted(() => {
 useSeoMeta({
   title: 'Zachary Cauchi Portfolio Site',
   ogTitle: 'Zachary Cauchi Portfolio Site',
-  description: 'This is my portfolio, everything you need to know about me in a handfull of pages.',
-  ogDescription: 'This is my portfolio, everything you need to know about me in a handfull of pages.',
+  description: 'This is my portfolio, everything you need to know about me in a handful of pages.',
+  ogDescription: 'This is my portfolio, everything you need to know about me in a handful of pages.',
   ogImage: 'https://avatars.githubusercontent.com/u/23012377?v=4',
   ogImageAlt: 'Zachary Cauchi\'s Avatar',
   ogImageHeight: 460,
@@ -39,7 +39,7 @@ useSeoMeta({
   charset: 'utf-8',
   ogLocale: 'en_GB',
   ogType: 'website',
-  ogUrl: 'zachary-cauchi.github.io',
+  ogUrl: config.public.siteUrl,
   publisher: 'GitHub',
   viewport: {
     width: 'device-width',
