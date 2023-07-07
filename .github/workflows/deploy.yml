@@ -68,6 +68,7 @@ jobs:
         env:
           NITRO_PRESET: github-pages
           googleSiteVerification: ${{ vars.GOOGLESITEVERIFICATION }}
+          gtag: ${{ vars.GTAG }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
