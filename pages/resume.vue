@@ -57,7 +57,7 @@ const categorisedSkills = computed(() => {
     </section>
 
     <section class="skill">
-      <div class="skills-container content-card">
+      <div class="skills-container">
         <h3 class="h3">Skills</h3>
         <div v-for="categorisedSkill in categorisedSkills" :key="categorisedSkill.id" class="skills-container content-card">
           <h4 class="h4">{{categorisedSkill.title}}</h4>

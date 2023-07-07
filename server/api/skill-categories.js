@@ -30,6 +30,12 @@ export const skillCategories = [
       en: 'Backend Frameworks'
     }
   },
+  {
+    id: 6,
+    title: {
+      en: 'Testing'
+    }
+  },
 ]
 
 export default defineEventHandler(() => {
