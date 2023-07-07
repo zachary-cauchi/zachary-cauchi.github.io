@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/robots',
     '@intlify/nuxt3',
-    'nuxt-simple-sitemap'
+    'nuxt-simple-sitemap',
+    'nuxt-gtag'
   ],
   experimental: {
     reactivityTransform: true,
@@ -66,8 +67,11 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://zachary-cauchi.github.io',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://zachary-cauchi.com',
       googleSiteVerification: process.env.googleSiteVerification ?? '<site-key-missing>'
     }
   },
+  gtag: {
+    id: process.env.gtag ?? '<gtag-missing>'
+  }
 })
