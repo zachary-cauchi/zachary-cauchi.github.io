@@ -4,6 +4,12 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
+    paths:
+      - '**.js'
+      - '**.ts'
+      - '**.vue'
+      - '**.html'
+      - '**.css'
 
 jobs:
   test:
