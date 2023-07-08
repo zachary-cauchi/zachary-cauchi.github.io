@@ -9,6 +9,6 @@ test('url is as expected', async ({ page }) => {
   await expect(page).toHaveTitle(/Portfolio/);
 })
 
-test('percy snapshot', async ({ page }) => {
-  await percySnapshot(page, 'Portfolio page')
+test('percy snapshot', async ({ page, browserName }) => {
+  await percySnapshot(page, `Portfolio page ${browserName}`)
 })
