@@ -4,6 +4,12 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
+    paths:
+      - '**.js'
+      - '**.ts'
+      - '**.vue'
+      - '**.html'
+      - '**.css'
 
 jobs:
   test:
@@ -37,16 +43,18 @@ jobs:
       # if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Running Playwright tests on Preview
-      run: npx playwright test
-      if: github.ref_name == 'develop' || github.base_ref == 'develop' || github.base_ref == 'main'
+      run: npm test
+      if: (github.ref_name == 'develop' || github.base_ref == 'develop' || github.base_ref == 'main') && github.event.pull_request.merged == false
       env:
         NUXT_PUBLIC_SITE_URL: ${{ secrets.PREVIEW_URL }}
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
     - name: Running Playwright tests on Main
-      run: npx playwright test
+      run: npm test
       if: github.ref_name == 'main' && github.event.pull_request.merged == true
       env:
         NUXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL }}
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
     - uses: actions/upload-artifact@v3
       if: always()
