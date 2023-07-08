@@ -3,6 +3,7 @@ import { useI18n } from 'vue-i18n'
 import { Icon } from '@iconify/vue';
 
 useHead({
+  title: 'About me'
 })
 
 onMounted(() => {
@@ -48,7 +49,7 @@ const { data: about } = await useFetch('/api/about')
 
     <section class="about-text">
       <ul class="about-list">
-        <AboutItem v-for="about in about" :key="about.id" :about="about" />
+        <AboutItem :about="about[0]" />
       </ul>
     </section>
 
