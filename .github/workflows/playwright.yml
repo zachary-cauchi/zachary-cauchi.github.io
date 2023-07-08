@@ -47,11 +47,16 @@ jobs:
       if: (github.ref_name == 'develop' || github.base_ref == 'develop' || github.base_ref == 'main') && github.event.pull_request.merged == false
       env:
         NUXT_PUBLIC_SITE_URL: ${{ secrets.PREVIEW_URL }}
-        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
     - name: Running Playwright tests on Main
       run: npm test
       if: github.ref_name == 'main' && github.event.pull_request.merged == true
+      env:
+        NUXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL }}
+
+    - name: Run Percy regression tests
+      run: npm run percy
+      if: github.ref_name == 'main' || github.ref_name == 'develop'
       env:
         NUXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL }}
         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
