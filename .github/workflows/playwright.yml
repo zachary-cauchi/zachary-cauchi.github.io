@@ -38,7 +38,7 @@ jobs:
 
     - name: Running Playwright tests on Preview
       run: npm test
-      if: github.ref_name == 'develop' || github.base_ref == 'develop' || github.base_ref == 'main'
+      if: (github.ref_name == 'develop' || github.base_ref == 'develop' || github.base_ref == 'main') && github.event.pull_request.merged == false
       env:
         NUXT_PUBLIC_SITE_URL: ${{ secrets.PREVIEW_URL }}
         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
