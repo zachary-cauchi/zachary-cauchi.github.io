@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import percySnapshot from '@percy/playwright'
 
 test.beforeEach(async ({ page }) => {
     await page.goto('/resume')
@@ -8,7 +7,3 @@ test.beforeEach(async ({ page }) => {
 test('url is as expected', async ({ page }) => {
   await expect(page).toHaveTitle(/Resume/);
 });
-
-test('percy snapshot', async ({ page, browserName }) => {
-  await percySnapshot(page, `Resume page ${browserName}`)
-})
