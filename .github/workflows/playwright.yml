@@ -34,12 +34,7 @@ jobs:
 
     - name: Ensure Playwright Browsers Installed
       run: npx playwright install --with-deps
-      if: steps.playwright-cache.outputs.cache-hit != 'true'
-
-
-    - name: Install Playwright Browsers
-      run: npx playwright install-deps
-      if: steps.playwright-cache.outputs.cache-hit != 'true'
+      # if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Running Playwright tests on Preview
       run: npx playwright test
