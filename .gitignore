@@ -131,3 +131,6 @@ dist
 
 # Ignore Nuxt builds
 .output
+/test-results/
+/playwright-report/
+/playwright/.cache/

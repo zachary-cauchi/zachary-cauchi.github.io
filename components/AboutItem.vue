@@ -21,11 +21,11 @@ const { locale } = useI18n({ useScope: 'global' })
         {{ about.description?.en.about }}
       </p>
       <br/>
-      <p class="about-item-text">
+      <p class="hobbies-item-text">
         {{ about.description?.en.hobbies }}
       </p>
       <br/>
-      <p class="about-item-text">
+      <p class="foryou-item-text">
         {{ about.description?.en.forYou }}
       </p>
     </div>
