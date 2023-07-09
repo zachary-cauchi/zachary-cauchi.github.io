@@ -9,7 +9,9 @@
     "postinstall": "nuxi prepare",
     "generate": "nuxi generate",
     "generate-gh": "NITRO_PRESET=github-pages nuxi generate",
-    "generate-cf": "NITRO_PRESET=cloudflare_pages nuxi generate"
+    "generate-cf": "NITRO_PRESET=cloudflare_pages nuxi generate",
+    "test": "playwright test",
+    "percy": "percy exec -- node take-snapshots.ts"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
@@ -21,7 +23,10 @@
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@percy/cli": "^1.26.2",
+    "@percy/playwright": "^1.0.4",
     "@pinia/nuxt": "^0.4.11",
+    "@playwright/test": "^1.35.1",
     "@vueuse/nuxt": "^10.2.0",
     "eslint": "^8.43.0",
     "nuxt": "^3.6.1",
