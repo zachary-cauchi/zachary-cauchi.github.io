@@ -42,18 +42,24 @@ jobs:
       run: npx playwright install --with-deps
       # if: steps.playwright-cache.outputs.cache-hit != 'true'
 
-    - name: Running Playwright tests on Preview
-      run: npm test
+    - name: Set Site URL for Preview
+      run: echo "NUXT_PUBLIC_SITE_URL=$SITE_URL" >> $GITHUB_ENV
       if: (github.ref_name == 'develop' || github.base_ref == 'develop' || github.base_ref == 'main') && github.event.pull_request.merged == false
       env:
-        NUXT_PUBLIC_SITE_URL: ${{ secrets.PREVIEW_URL }}
-        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        SITE_URL: ${{ secrets.PREVIEW_URL }}
 
-    - name: Running Playwright tests on Main
-      run: npm test
+    - name: Set Site URL for Main
+      run: echo "NUXT_PUBLIC_SITE_URL=$SITE_URL" >> $GITHUB_ENV
       if: github.ref_name == 'main' && github.event.pull_request.merged == true
       env:
-        NUXT_PUBLIC_SITE_URL: ${{ vars.SITE_URL }}
+        SITE_URL: ${{ vars.SITE_URL }}
+
+    - name: Running Playwright tests
+      run: npm test
+
+    - name: Run Percy regression tests
+      run: npm run percy
+      env:
         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
     - uses: actions/upload-artifact@v3

@@ -10,7 +10,8 @@
     "generate": "nuxi generate",
     "generate-gh": "NITRO_PRESET=github-pages nuxi generate",
     "generate-cf": "NITRO_PRESET=cloudflare_pages nuxi generate",
-    "test": "percy exec -- playwright test"
+    "test": "playwright test",
+    "percy": "percy exec -- node take-snapshots.ts"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
