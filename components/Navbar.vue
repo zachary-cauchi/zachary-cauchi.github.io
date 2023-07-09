@@ -6,12 +6,6 @@
   <nav class="navbar">
     <ul class="navbar-list">
       <li class="navbar-item">
-        <NuxtLink to="/" class="navbar-link">
-          {{ $t('pageTitles.about') }}
-        </NuxtLink>
-      </li>
-
-      <li class="navbar-item">
         <NuxtLink to="/resume" class="navbar-link">
           {{ $t('pageTitles.resume') }}
         </NuxtLink>
@@ -24,8 +18,8 @@
       </li>
 
       <li class="navbar-item">
-        <NuxtLink to="/github" class="navbar-link">
-          {{ $t('pageTitles.github') }}
+        <NuxtLink to="/" class="navbar-link">
+          {{ $t('pageTitles.about') }}
         </NuxtLink>
       </li>
     </ul>
