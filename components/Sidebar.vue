@@ -61,49 +61,31 @@ onMounted(() => {
 
       <div class="separator" />
 
-      <ul class="contacts-list">
-        <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="logo-github" />
-          </div>
+      <div class="contacts-list">
+        <div class="contact-item">
+          <NuxtLink to="https://github.com/zachary-cauchi" class="social-link" target="_blank">
+            <div class="icon-box">
+              <ion-icon name="logo-github" />
+            </div>
+          </NuxtLink>
+        </div>
 
-          <div class="contact-info">
-            <p class="contact-title">
-              Github
-            </p>
+        <div class="contact-item">
+          <NuxtLink to="https://www.linkedin.com/in/zachary-c-586559164/" class="social-link" target="_blank">
+            <div class="icon-box">
+              <ion-icon name="logo-linkedin" />
+            </div>
+          </NuxtLink>
+        </div>
 
-            <a href="https://github.com/zachary-cauchi" class="contact-link" target="_blank">zachary-cauchi</a>
-          </div>
-        </li>
-
-        <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="logo-linkedin" />
-          </div>
-
-          <div class="contact-info">
-            <p class="contact-title">
-              Linkedin
-            </p>
-
-            <a href="https://www.linkedin.com/in/zachary-c-586559164/" class="contact-link" target="_blank">Zachary Cauchi</a>
-          </div>
-        </li>
-
-        <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="location-outline" />
-          </div>
-
-          <div class="contact-info">
-            <p class="contact-title">
-              Location
-            </p>
-
-            <address>Malta 🇲🇹</address>
-          </div>
-        </li>
-      </ul>
+        <div class="contact-item">
+          <NuxtLink to="mailto:zach.cauchi@hotmail.com" class="social-link" target="_blank">
+            <div class="icon-box">
+              <ion-icon name="mail-outline" />
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
     </div>
   </aside>
 </template>

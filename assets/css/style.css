@@ -410,9 +410,15 @@ main {
 }
 
 .contacts-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.contact-item: {
+  display: flex;
+  padding: 0;
 }
 
 .github-item {
