@@ -43,8 +43,12 @@ jobs:
 
     - name: Set Site URL for Preview
       run: |
-        set PREFIX=$BRANCH_HEAD_NAME
-        set PREFIX=${$PREFIX:-$BRANCH_NAME}
+        if [ -z "${BRANCH_HEAD_NAME:-}" ]; then
+          set PREFIX=$BRANCH_NAME
+        else
+          set PREFIX=$BRANCH_HEAD_NAME
+        fi
+
         echo "Using preview url with subdomain $PREFIX"
         echo "NUXT_PUBLIC_SITE_URL=https://$(sed --expression 's/\(\/\)/-/g' --expression 's/^-//' <<< $BRANCH_NAME)$PREVIEW_EXTENSION" >> $GITHUB_ENV
       if: (github.ref_name == 'develop' || github.base_ref == 'develop' || github.base_ref == 'main')
