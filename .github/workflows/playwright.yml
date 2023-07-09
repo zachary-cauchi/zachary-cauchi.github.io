@@ -50,7 +50,7 @@ jobs:
 
     - name: Set Site URL for Main
       run: echo "NUXT_PUBLIC_SITE_URL=$SITE_URL" >> $GITHUB_ENV
-      if: github.ref_name == 'main' && github.event.pull_request.merged == true
+      if: (github.ref_name == 'main' || github.base_ref == 'main') && github.event.pull_request.merged == true
       env:
         SITE_URL: ${{ vars.SITE_URL }}
 
