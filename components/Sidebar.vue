@@ -1,9 +1,9 @@
 <script setup>
 const info_more_btn = ref(null)
 
-let isClosed = ref(true)
-let contactsIcon = ref('chevron-down')
-let showHideContactsMsg = ref('Show Contacts')
+let isClosed = ref(false)
+let contactsIcon = ref('chevron-up')
+let showHideContactsMsg = ref('Hide Contacts')
 
 function toggleMenu(event) {
   isClosed = !isClosed
@@ -13,8 +13,6 @@ function toggleMenu(event) {
 }
 
 onMounted(() => {
-  // Fixes 1st click not working.
-  info_more_btn.value.click()
 })
 
 </script>
@@ -31,13 +29,6 @@ onMounted(() => {
           Zachary Cauchi
         </h1>
       </div>
-
-      <button ref="info_more_btn" class="info_more-btn" @click="toggleMenu">
-        <span v-text="showHideContactsMsg"></span>
-
-        <!-- TODO: Improve with animation -->
-        <ion-icon :name="contactsIcon" />
-      </button>
     </div>
 
     <div class="sidebar-info_more">
