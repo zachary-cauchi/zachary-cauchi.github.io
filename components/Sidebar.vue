@@ -30,11 +30,6 @@ onMounted(() => {
         <h1 class="name" title="Zachary Cauchi">
           Zachary Cauchi
         </h1>
-
-        <p class="title text-center xl:block flex items-center justify-center gap-1">
-          <span class="xl:after:content-[''] after:content-[',']">Backend Developer</span>
-          <span>Project tinkerer</span>
-        </p>
       </div>
 
       <button ref="info_more_btn" class="info_more-btn" @click="toggleMenu">
@@ -48,16 +43,11 @@ onMounted(() => {
     <div class="sidebar-info_more">
       <div class="separator" />
 
-      <ul class="social-list">
-        <p class="contact-title">
-          My email:
+      <div class="social-list">
+        <p class="sidebar-blurb">
+          A professional developer with a penchant for learning about new tech.
         </p>
-        <li class="social-item">
-          <NuxtLink to="mailto:zach.cauchi@hotmail.com" class="social-link" target="_blank">
-            <ion-icon name="mail-outline" />
-          </NuxtLink>
-        </li>
-      </ul>
+      </div>
 
       <div class="separator" />
 

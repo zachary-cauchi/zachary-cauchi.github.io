@@ -348,6 +348,10 @@ main {
   border-radius: 20px;
 }
 
+.sidebar-blurb {
+  text-align: center;
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
