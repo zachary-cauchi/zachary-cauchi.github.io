@@ -427,7 +427,7 @@ main {
   justify-content: space-evenly;
 }
 
-.contact-item: {
+.contact-item {
   display: flex;
   padding: 0;
 }
