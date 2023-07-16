@@ -193,6 +193,7 @@ article {
   width: 30px;
   height: 30px;
   border-radius: 8px;
+  padding: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,7 +212,17 @@ article {
   z-index: -1;
 }
 
-.icon-box ion-icon { --ionicon-stroke-width: 35px; }
+.icon-box:hover,
+.icon-box:focus { background: var(--bg-gradient-yellow-1); }
+
+.icon-box:hover::before,
+.icon-box:focus::before { background: var(--bg-gradient-yellow-2); }
+
+.icon-box ion-icon {
+  display: contents;
+  
+  --ionicon-stroke-width: 40px;
+}
 
 article { display: none; }
 
@@ -330,16 +341,21 @@ main {
 .sidebar.active { max-height: 8rem; }
 
 .sidebar-info {
-  position: relative;
+  /* position: inline; */
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 15px;
 }
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
+
   border-radius: 20px;
+}
+
+.sidebar-blurb {
+  text-align: center;
 }
 
 .info-content .name {
@@ -361,7 +377,8 @@ main {
 }
 
 .info_more-btn {
-  position: absolute;
+  position: relative;
+  float: right;
   top: -1rem;
   right: -1rem;
   border-radius: 0 15px;
@@ -404,9 +421,15 @@ main {
 }
 
 .contacts-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.contact-item {
+  display: flex;
+  padding: 0;
 }
 
 .github-item {
@@ -1334,8 +1357,8 @@ textarea.github::-webkit-resizer { display: none; }
   }
 
   .icon-box {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     border-radius: 12px;
     font-size: 18px;
   }
@@ -1366,19 +1389,21 @@ textarea.github::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  /* .avatar-box { border-radius: 30px; } */
 
-  .avatar-box img { width: 120px; }
+  /* .avatar-box img { width: 80%; } */
+
+  .avatar-box img {
+    padding: 10%;
+    max-width: 100%;
+    border-radius: 15%;
+    margin: auto;
+    height: auto;
+  }
 
   .info-content .name { margin-bottom: 15px; }
 
   .info-content .title { padding: 5px 18px; }
-
-  .info_more-btn {
-    top: -4rem;
-    right: -2rem;
-    padding: 10px 15px;
-  }
 
   .info_more-btn span {
     display: block;
@@ -1879,7 +1904,11 @@ textarea.github::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img {
+    padding: 10%;
+    width: 100%;
+    margin: auto;
+  }
 
   .info-content .name {
     white-space: nowrap;
