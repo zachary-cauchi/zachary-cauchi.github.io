@@ -1,42 +1,42 @@
-import { defineEventHandler } from 'h3'
+import { defineEventHandler } from "h3";
 
 export default defineEventHandler(() => {
   return [
     {
       id: 1,
-      title: 'C#',
+      title: "C#",
       description: {
-        en: 'I am experienced with using C# to develop Enterprise-ready web APIs using frameworks and tools such as ASP.NET Core and Microsoft Orleans.',
+        en: "I am experienced with using C# to develop Enterprise-ready web APIs using frameworks and tools such as ASP.NET Core and Microsoft Orleans.",
       },
-      icon: 'devicon:csharp',
+      icon: "devicon:csharp",
       image: null,
     },
     {
       id: 2,
-      title: 'Typescript',
+      title: "Rust",
       description: {
-        en: 'I am adept with using Javascript and Typescript to create microservices, perform automated testing of websites, and develop CI/CD actions.',
+        en: "I create secure and performant applications and web APIs using Rust, capable of coordinating multiple separate applications to service client requests..",
       },
-      icon: 'devicon:typescript',
+      icon: "devicon:rust",
       image: null,
     },
     {
       id: 3,
-      title: 'C++',
+      title: "C++",
       description: {
-        en: 'I have experience with using C/C++ for developing embedded programs and applications as well as performance-intensive applications.'
+        en: "I have experience with using C/C++ for developing embedded programs and applications as well as performance-intensive applications.",
       },
-      icon: 'devicon:cplusplus',
+      icon: "devicon:cplusplus",
       image: null,
     },
     {
       id: 4,
-      title: 'Python',
+      title: "Python",
       description: {
-        en: 'In my AI-oriented projects, I use Python as the main language of choice.',
+        en: "In my AI-oriented projects, I use Python as the main language of choice. I also use it with ansible for deployment automations.",
       },
-      icon: 'devicon:python',
+      icon: "devicon:python",
       image: null,
     },
-  ]
-})
+  ];
+});
