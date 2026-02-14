@@ -56,8 +56,6 @@ useSeoMeta({
 </script>
 
 <template>
-    <!-- <LoadingPage v-show="!loadingPage" /> -->
-
     <NuxtLayout>
         <NuxtPage transition />
     </NuxtLayout>
